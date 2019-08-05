@@ -28,7 +28,7 @@ class Polls extends React.Component {
         <div
           style={{
             width: "100%",
-            height: "100vh",
+            minHeight: "100vh",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -38,7 +38,7 @@ class Polls extends React.Component {
         <h3 style={{
           width: '250px',
           textAlign: 'center'
-        }}>Enter the header for your poll and input your options for it.</h3>
+        }}>Enter title and options</h3>
           <PollMain url={this.state.url}/>
 
           <a style={{
