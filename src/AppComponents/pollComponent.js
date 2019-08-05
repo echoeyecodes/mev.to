@@ -102,7 +102,7 @@ class PollComponent extends React.Component {
   render() {
     return (
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <PollSuccessfulDialog show={this.state.isSuccessful} info={this.state.path}/>
+        <PollSuccessfulDialog url={this.props.url} show={this.state.isSuccessful} info={this.state.path}/>
        <input
           style={{
             width: "200px",

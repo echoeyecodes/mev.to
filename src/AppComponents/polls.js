@@ -10,10 +10,20 @@ class Polls extends React.Component {
       if (!Firebase.apps.length) {
         Firebase.initializeApp(config)
       }
+
+  }
+  this.state={
+    url: ''
   }
 
   }
+  componentDidMount(){
+      this.setState({
+        url: window.location.hostname
+      })
+  }
   render() {
+   
     return (
         <div
           style={{
@@ -29,7 +39,7 @@ class Polls extends React.Component {
           width: '250px',
           textAlign: 'center'
         }}>Enter the header for your poll and input your options for it.</h3>
-          <PollMain />
+          <PollMain url={this.state.url}/>
 
           <a style={{
             color: 'black',

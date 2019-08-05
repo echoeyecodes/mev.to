@@ -23,7 +23,7 @@ export default function PollSuccessfulDialog(props) {
         </DialogContent>
         <DialogActions>
           <Button color="primary" autoFocus>
-          <a style={{textDecorationLine: 'none', textDecorationColor: '#663399'}} href={`https:/echoeyecodes.com/?${props.info}`}>
+          <a style={{textDecorationLine: 'none', textDecorationColor: '#663399'}} href={`/?${props.info}`}>
           Copy to clipboard and continue
           </a>
           </Button>

@@ -56,7 +56,7 @@ class PollMain extends React.Component{
         return(
             <div>
             {this.state.showLogin ? <LoginComponent show ={this.state.showLogin} /> : null}
-            {this.state.isMain ? <PollData totalVoteCount={this.state.totalVoteCount} query = {this.state.query} /> : <PollComponent />}
+            {this.state.isMain ? <PollData totalVoteCount={this.state.totalVoteCount} query = {this.state.query} /> : <PollComponent url={this.props.url}/>}
             </div>
         )
     }
