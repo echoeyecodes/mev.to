@@ -16,6 +16,7 @@ export default function AlertDialog(props) {
 
       Firebase.auth().signInWithPopup(provider).then(result => {
           // This gives you a Google Access Token. You can use it to access the Google API.
+          var token = result.credential.accessToken;
           // The signed-in user info.
           var user = result.user;
           let id = Firebase.database().ref().child('users')
@@ -23,7 +24,9 @@ export default function AlertDialog(props) {
           // ...
         }).catch( error => {
           // Handle Errors here.
-          alert(error.errorMessage)
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          alert(errorMessage)
         });
   }
   
