@@ -1,0 +1,32 @@
+.blogHolder{
+    display: block;
+    margin:20px 15px;
+    height: 100%;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+#description{
+    color:hsl(0, 0%, 13%);
+}
+.mainHolder p{
+    line-height: 1.7em;
+}
+.headerTitle{
+    font-size: 26px;
+}
+.blogContent{
+    max-width: 100%;
+}
+.blogContent p{
+    line-height: 1.6em;
+    font-size: 14px;
+}
+@media only screen and (max-width: 900px) {
+    .mainHolder{
+        min-height: 85vh;
+    }
+    .headerTitle{
+        font-size: 20px;
+    }
+}
+
