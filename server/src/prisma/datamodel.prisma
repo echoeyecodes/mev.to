@@ -1,0 +1,37 @@
+type User{
+    id: ID! @id
+    fullName: String!
+    username: String!
+    profileImage: String!
+    createdAt: DateTime! @createdAt
+    email:String!
+    password: String!
+    gender: String!
+    posts: [Post!]! @relation(name: "UserPosts")
+    readingList: [Post!]! @relation(name: "ReadingList")
+}
+type Post{
+    id: ID! @id
+    title: String!
+    content: String!
+    createdAt: DateTime! @createdAt
+    images: String!
+    postedBy: User @relation(name: "UserPosts")
+    tags: [String] @scalarList(strategy: RELATION)
+    likes: [Like!]!
+    comments: [Comment!]!
+    reading: [User!]! @relation(name: "ReadingList")
+}
+type Like{
+    id: ID! @id
+    likedBy: User
+    createdAt: DateTime! @createdAt
+    post: Post
+}
+type Comment{
+    id: ID! @id
+    commentBy: User!
+    createdAt: DateTime! @createdAt
+    post: Post!
+    content: String!
+}

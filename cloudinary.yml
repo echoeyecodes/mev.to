@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: echoeyecodes
+  api_key: '846234423836424'
+  api_secret: i-WXUJuqeN28b0Q7Ec3x-fyI5nk
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: echoeyecodes
+  api_key: '846234423836424'
+  api_secret: i-WXUJuqeN28b0Q7Ec3x-fyI5nk
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: echoeyecodes
+  api_key: '846234423836424'
+  api_secret: i-WXUJuqeN28b0Q7Ec3x-fyI5nk
+  enhance_image_tag: true
+  static_file_support: false

@@ -1,0 +1,71 @@
+scalar Upload
+type User{
+    id: ID!
+    fullName: String!
+    username: String!
+    profileImage: String!
+    email:String!
+    gender: String
+    posts: [Post!]!
+    readingList: [Post!]!
+}
+type Query{
+    users: [User!]!
+    singlePost(id: ID!): Post
+    singleUser(username: String!): User
+    currentUser: User
+    posts: [Post!]!
+    likes: [Like!]!
+    uploads: String!
+    comments: [Comment!]!
+}
+type Subscription{
+    newPost: Post
+    newUser: User
+    newComment: Comment
+    newPostForComments: Comment
+}
+type Post{
+    id: ID!
+    title: String!
+    content: String!
+    images: String!
+    createdAt: String!
+    likes: [Like!]!
+    comments: [Comment!]!
+    tags: [String]
+    postedBy: User
+    reading: [User!]!
+}
+type Mutation{
+    signUp(fullName: String!, password: String!, email: String!, username:String!, gender: String, profileImage: String!): AuthLoad
+    login(username: String!, password: String!): AuthLoad
+    createPost(image: String!, title: String!, tags: [String], content: String!): Post
+    likePost(id: ID!, postID: ID!): Like
+    singleUpload(file: Upload!): File!
+    alterPost(id: ID!, title: String!): Post
+    addReadingList(id: ID!): User
+    commentPost(postID: ID!, content: String!): Comment
+}
+type AuthLoad{
+    token: String!
+    user: User!
+}
+type File{
+    filename: String!
+    mimetype: String!
+    encoding: String!
+}
+type Like{
+    id: ID!
+    likedBy: User
+    createdAt: String!
+    post: Post
+}
+type Comment{
+    id: ID!
+    commentBy: User!
+    createdAt: String!
+    post: Post!
+    content: String!
+}

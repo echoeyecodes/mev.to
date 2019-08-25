@@ -11,6 +11,7 @@
 # production
 /build
 
+/server/src/mevto-232e51f8cd95.json
 # misc
 .DS_Store
 .env.local
