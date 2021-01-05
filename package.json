@@ -16,7 +16,7 @@
     "apollo-server": "^2.8.1",
     "apollo-server-express": "^2.8.1",
     "apollo-upload-client": "^11.0.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "cloudinary-react": "^1.1.4",
     "filesystem": "^1.0.1",
